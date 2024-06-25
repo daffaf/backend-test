@@ -29,6 +29,17 @@ app.get('/products',(req:Request,res:Response)=>{
     // Logic untuk mendapatkan semua product
     res.send("List of products")
 })
+// Endpoint untuk membuat order
+app.post('/orders',(req:Request,res:Response)=>{
+    const {productId , quantity} = req.body;
+    // Logic untuk membuat order
+    res.send("Order Created");
+})
+// Endpoint untuk mendapatkan semua order
+app.get('/orders',(req:Request,res:Response)=>{
+    // Logic untuk mendapatkan semua order
+    res.send("List of orders");
+})
 app.listen(port, ()=>{
     console.log(`Server running on port ${port}`)
 })
